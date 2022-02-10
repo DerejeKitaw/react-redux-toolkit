@@ -1,7 +1,8 @@
 import React from 'react';
 import { useSelector,useDispatch } from 'react-redux';
 import './style.css';
-import Notification from './components/ui/Notification';
+import Notification from './features/ui/Notification';
+import Counters from './features/counter/Counters';
 
 import {uiActions} from './store/slices/ui';
 
@@ -17,14 +18,15 @@ export default function App() {
   }
   return (
     <div>
-      {notification &&
+      {/* {notification &&
         <Notification
           title={notification.title}
           message={notification.message}
           status={notification.status}
         ></Notification>
       }
-      <button onClick={notifyhandler}>Notify</button>
+      <button onClick={notifyhandler}>Notify</button> */}
+      <Counters/>
     </div>
   );
 }
