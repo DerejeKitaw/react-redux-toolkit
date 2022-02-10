@@ -1,11 +1,14 @@
-import React from "react";
-import "./style.css";
-
+import React from 'react';
+import './style.css';
+import Notification from './components/ui/Notification';
 export default function App() {
   return (
     <div>
-      <h1>Hello StackBlitz!</h1>
-      <p>Start editing to see some magic happen :)</p>
+      <Notification
+        title="title"
+        message="message"
+        status="success"
+      ></Notification>
     </div>
   );
 }
