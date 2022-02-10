@@ -5,4 +5,4 @@ const store = configureStore({
   reducer: { ui: uiSlice.reducer },
 });
 
-export default store
+export default store;
