@@ -4,7 +4,7 @@ import './style.css';
 import Notification from './features/ui/Notification';
 import Counters from './features/counter/Counters';
 
-import {uiActions} from './store/slices/ui';
+import {uiActions} from './features/ui/uiSlice';
 
 export default function App() {
   const notification = useSelector((state) => state.ui.notification);

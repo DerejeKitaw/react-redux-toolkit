@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
 import classes from './Counters.module.css';
@@ -8,21 +8,24 @@ import {
   incrementByAmount,
   incrementAsync,
   selectCount,
-} from '../../store/slices/counterSlice';
+} from './counterSlice';
 
 const Counters = (props) => {
-  // const count = useSelector(selectCount);
-  const count = 2;
+  const count = useSelector(selectCount);
+  // const count = 2;
   const dispatch = useDispatch();
   const [incrementAmount, setIncrementAmount] = useState('2');
   return (
     <div className={classes.row}>
-      <button className={classes.button}>+</button>
+      <button onClick={() => dispatch(increment())} className={classes.button}>
+        +
+      </button>
       <span className={classes.value}>{count}</span>
-      <button className={classes.button}>-</button>
+      <button onClick={() => dispatch(decrement())} className={classes.button}>
+        -
+      </button>
     </div>
   );
 };
-
 
 export default Counters;
